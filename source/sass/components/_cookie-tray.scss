@@ -1,0 +1,73 @@
+.cookie-tray {
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    width: 100%;
+    background-color: $color-dark-blue;
+    color: #fff;
+    font-size: 1.6rem;
+    border-top: 2px solid $color-white;
+    @include make-container();
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    @include media-breakpoint-up(md) {
+        padding: 2rem 3rem;
+    }
+    animation: slideUp 1s forwards;
+    
+    &.clicked {
+        animation: slideDown 1.5s ease-out forwards;
+    }
+
+    &__container {
+        @include make-row();
+    }
+    &__text {
+        @include make-col-ready();
+        @include make-col(8);
+        @include media-breakpoint-up(md) {
+            @include make-col(9);
+        }
+        align-self: center;
+    }
+
+    &__link:link,
+    &__link:visited {
+        text-decoration: underline;
+        color: #fff;
+    }
+
+    &__button-box {
+        text-align: center;
+        align-self: center;
+        @include make-col-ready();
+        @include make-col(4);
+        @include media-breakpoint-up(md) {
+            @include make-col(3);
+            text-align: right;
+        }
+    }
+
+    &__button {
+        display: inline-block;
+        border: 2px solid $color-white;
+        color: $color-white;
+        background-color: $color-medium-blue;
+        padding: .5rem 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: all .2s;
+        outline: none;
+
+        &:hover {
+            background-color: $color-dark-blue;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

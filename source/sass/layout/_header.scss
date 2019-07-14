@@ -1,0 +1,10 @@
+.header {
+    @include make-container();
+    background-color: $color-dark-blue;
+    padding-bottom: 4rem;
+
+    @include media-breakpoint-up(xs) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

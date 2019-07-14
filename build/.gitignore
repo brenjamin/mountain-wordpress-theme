@@ -1,0 +1,8 @@
+/CLIENT
+.DS_Store
+Docs/*
+images/Archive/*
+Screenshots/*
+/Archive
+/CLEAN
+assets

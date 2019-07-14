@@ -1,0 +1,44 @@
+svg.plane-svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /**
+   * Paper Plane
+   */
+  /*Paper Plane: Container*/
+  .plane-container {
+    width: 200px;
+    margin: 0px auto 2.5rem;
+    z-index: 3;
+    height: 150px;
+  }
+   /*Paper Plane: Image*/
+  .plane {
+    width: 100%;
+    height: 60px;
+  }
+  
+  /*Paper Plane: Animation*/
+  .plane-container {
+    -webkit-animation: paper-plane-scoping 2s alternate infinite;
+    -moz-animation: paper-plane-scoping 2s alternate infinite;
+    animation: paper-plane-scoping 2s alternate infinite;
+  
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    animation-timing-function: linear;
+  }
+  
+ 
+  
+  .plane {
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  
+    -webkit-animation: paper-plane-soaring 4s forwards infinite;
+    -moz-animation: paper-plane-soaring 4s forwards infinite;
+    animation: paper-plane-soaring 4s forwards infinite;
+  }

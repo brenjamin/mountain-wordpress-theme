@@ -1,0 +1,110 @@
+.navigation {
+    max-width: 96rem;
+    @include make-row();
+    margin: 0 auto;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 1rem 0;
+    position: relative;
+
+    &__logo {
+        @include make-col-ready();
+        @include media-breakpoint-up(xs) {
+            @include make-col(8);
+            img {
+                max-width: 100%;
+            }
+        }
+        @include media-breakpoint-up(lg) {
+            @include make-col(4);
+        }
+    }
+
+    &__menu {
+        text-align: right;
+        @include make-col-ready();
+        @include media-breakpoint-up(xs) {
+            display: none;
+            @include make-col(8);
+        }
+        @include media-breakpoint-up(lg) {
+            @include make-col(8);
+            display: block;
+        }
+    }
+
+    &__items {
+        margin-bottom: 0;
+    }
+    &__item {
+        position: relative;
+        display: inline-block;
+        box-sizing: border-box;
+        z-index: 999;
+        
+
+        &:hover {
+            background-color: $color-medium-blue;
+        }
+        &:not(first-child) {
+            margin-left: 2rem;
+        }
+    }
+
+    
+    &__dropdown-link {
+        padding: 1.5rem .75rem;
+    }
+
+    &__item:hover > .navigation__dropdown {
+        display: block;
+        position: absolute;;
+        left: 0;
+        top: 5.4rem;
+        
+    }
+
+    &__link:link,
+    &__link:visited {
+        box-sizing: border-box;
+        text-transform: uppercase;
+        display: block;
+        width: 100%;
+        padding: 1.5rem .75rem;
+
+        &.active-link {
+            border-bottom: 5px solid $color-white;
+        }
+    }
+    &__link:link,
+    &__link:visited,
+    &__dropdown-link {
+        color: $color-white;
+        font-size: 1.6rem;
+        font-weight: bold;
+    }
+
+    &__link:hover,
+    &__link:active {
+        text-decoration: none;
+    }
+
+    &__dropdown {
+        display: none;
+        text-align: center;
+        z-index: 10;
+    }
+
+    &__dropdown-link {
+        background-color: $color-x-dark-blue;
+        color: #fff;
+        display: block;
+        white-space: nowrap;
+        text-align: left;
+
+        &:hover {
+            color: $color-light-gray;
+            text-decoration: none;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+.page {
+    &__img {
+        position: absolute;
+        right: 1.5rem;
+        top: -40px;
+        width: 20rem;
+
+        @include media-breakpoint-up(md) {
+            top: -60px;
+            width: 20rem;
+        }
+        @include media-breakpoint-up(lg) {
+            top: -50px;
+            width: 30rem;
+            right: 0rem;
+        }
+        
+    }
+    &__main {
+        max-width: 96rem;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+        position: relative;
+
+        @include media-breakpoint-up(lg) {
+            padding: 4rem 0;
+        }
+        
+    }
+    &__h1{
+        color: $color-dark-brown;
+        padding: 0;
+        font-size: 4.4rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        @include media-breakpoint-up(md) {
+            width: 75%;
+        }
+        &--small {
+            font-size: 65%;
+        }
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        @include media-breakpoint-up(md) {
+            width: 75%;
+        }
+    }
+    
+}
